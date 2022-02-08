@@ -22,7 +22,8 @@ if today in birthday_dict:
 		output = contents.replace("[NAME]", name)
 		print(output)
 
-		message = 'To: {}\r\nSubject: {}\r\n\r\n{}'.format(recipient_add, "Happy Birthday!", output)
+		# message = 'To: {}\r\nSubject: {}\r\n\r\n{}'.format(recipient_add, "Happy Birthday!", output)
+		message = 'To: {}\nSubject: {}\n\n{}'.format(recipient_add, "Happy Birthday!", output)
 
 		with smtplib.SMTP('smtp.gmail.com') as connection:
 			connection.starttls()
